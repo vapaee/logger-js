@@ -1,0 +1,25 @@
+{
+    "name": "@vapaee/logger",
+    "version": "0.9.1",
+    "description": "A simple logger utility",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "copy-version": "node scripts/copy_version.js",
+        "build": "yarn copy-version && tsc",
+        "test": "jest",
+        "prepublish": "yarn run build",
+        "dev": "yarn copy-version && tsc -w",
+        "publish": "yarn run build && npm publish --access public"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.5"
+    }
+}
